@@ -1,0 +1,54 @@
+<div class="signature">
+<style type="text/css">
+	.signature {
+		background-color: white;
+		font-family: Verdana, Geneva, Tahoma, sans-serif;
+		width: fit-content;
+		margin-bottom: 0;
+		margin-top: 0.2em;
+		font-size: 13px;
+		color: #272725;
+		padding: 0;
+	}
+
+	.orange.signature {
+		color: #de6a19;
+	}
+
+	.gray.signature {
+		color: #515151;
+	}
+
+	.line.signature {
+		height: 8px;
+		min-width: 500px;
+		width: auto;
+		background-color: #de6a19;
+		margin-top: 0.5em;
+	}
+</style>
+<br>
+<p class="signature">
+	С уважением,<br />
+	{{ first_name }} <b>{{ last_name }}</b>
+</p>
+
+<img class="signature" src=https://mail.kr-drive.ru/img/kr-logo-black.svg
+	alt="KR Automation" align="bottom" width="84" height="60" style="margin-top: 30px; margin-bottom: 30px;"/>
+<p class="gray signature" style="margin-bottom: 30px;">
+	{{ position }}
+</p>
+<p class="orange signature">КР Автоматизация</p> 
+<p class="signature">	600033, г. Владимир | ул. Мостостроевская, д. 18 </p>
+<p class="signature">
+	+7 4922 38 39 33 | +7 4922 37 24 80{% if added_number != '' %} | доб. {{ added_number }} {% endif %} {% if mobile_number != '' %}<br>
+	моб. {{ mobile_number }} {% endif %} 
+</p>
+<p class="signature">
+	<a class="orange signature" href="mailto:{{ email }}">{{ email }}</a>
+	 | 
+	<a class="gray signature" href="http://www.kr-automation.ru/">kr-automation.ru</a>
+</p>
+<div class="orange line signature"></div>
+<br>
+</div>
