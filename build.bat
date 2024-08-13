@@ -1,0 +1,1 @@
+.venv\Scripts\python.exe -m nuitka .\template_gui.py --onefile --enable-plugin=pyside6 --include-data-files=./template.ui=./template.ui --disable-console & pause

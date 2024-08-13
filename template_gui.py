@@ -48,7 +48,7 @@ MAIN_TEMPLATE: html = """
 <p class="orange signature">КР Автоматизация</p> 
 <p class="signature">	600033, г. Владимир | ул. Мостостроевская, д. 18 </p>
 <p class="signature">
-    +7 4922 38 39 33 | +7 4922 37 24 80{phones}
+    +7 4922 37 24 80 | +7 4922 37 24 81{phones}
 </p>
 <p class="signature">
     <a class="orange signature" href="mailto:{email}">{email}</a>
@@ -90,7 +90,7 @@ def main() -> None:
             "Сохранить",
             path.expanduser(f"~/Documents/{window.eMailLineEdit.text()}.html"),
         )
-        w_file = open(path_dialog, "w")
+        w_file = open(path_dialog, "w", encoding="utf-8")
         w_file.write(make_template_from_fields(MAIN_TEMPLATE, window))
 
     QCoreApplication.setAttribute(Qt.AA_ShareOpenGLContexts)  # warning fix
@@ -103,7 +103,6 @@ def main() -> None:
     window.show()
     window.saveButton.clicked.connect(on_click)
     sys.exit(app.exec())
-
 
 if __name__ == "__main__":
     main()
